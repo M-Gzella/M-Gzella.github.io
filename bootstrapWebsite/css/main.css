@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 50px;
+}
+
+body {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #d9d9d9;
+  background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+}
+
+.hero-img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url(../img/gdansk.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: scroll;
+  z-index: 1;
+}
+
+.hero-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.hero-text {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 0;
+  text-align: center;
+}
+
+.hero-text h1 {
+  letter-spacing: 10px;
+  color: #ddd;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 7rem;
+}
+
+.hero-text span {
+  color: #0c71c3;
+}
+
+.hero-text p {
+  color: #ddd;
+  font-size: 2rem;
+}
+
+.logo {
+  font-size: 4rem;
+  color: #0c71c3;
+}
+
+.navbar-nav a {
+  font-size: 2rem;
+  margin: 0 10px;
+}
+
+.nav-logo {
+  font-size: 3rem;
+  color: #0c71c3;
+}
+
+.navbar-brand p {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar-brand span {
+  color: #0c71c3;
+}
+
+.navbar-toggler {
+  padding: 5px 15px;
+}
+
+.business, .firm-second-part {
+  margin-top: 100px;
+}
+
+.img-conf h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: #0c71c3;
+}
+
+.img-conf img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.firm-text {
+  font-size: 1.8rem;
+}
+
+.card-group img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+}
+
+.card-group .card {
+  border: #ddd;
+  background-color: transparent;
+  color: #424242;
+}
+
+.card-group .card, .card-group .card-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.our-team {
+  font-weight: bold;
+  font-size: 3.5rem;
+  color: #0c71c3;
+}
+
+.team-carousel .card-title {
+  font-size: 3rem;
+  color: #0c71c3;
+}
+
+.prices {
+  background-color: #bdcad9;
+  background-image: linear-gradient(315deg, #bdcad9 0%, #e1dada 74%);
+}
+
+.prices-top h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #0c71c3;
+}
+
+.price-card {
+  margin-bottom: 20px;
+}
+
+.price-card h5 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 5px;
+}
+
+.price-card p {
+  font-size: 1.5rem;
+}
+
+.price-card .btn {
+  font-size: 1.8rem;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.price-card i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #0c71c3;
+}
+
+.price-card .card {
+  border-radius: 10px;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.prices {
+  -webkit-box-shadow: inset 0px -8px 10px 0px black;
+          box-shadow: inset 0px -8px 10px 0px black;
+  padding-bottom: 50px;
+}
+
+.prices .card:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(12, 113, 195, 0.247);
+          box-shadow: 0px 0px 5px 5px rgba(12, 113, 195, 0.247);
+  z-index: 100;
+}
+
+.prices .btn:hover {
+  background-color: #0c71c3;
+  color: #ddd;
+  border: none;
+}
+
+.contact-hero {
+  position: relative;
+  width: 100%;
+  background-image: url(../img/gdansknight.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  z-index: 10;
+  padding-bottom: 100px;
+}
+
+.contact-text {
+  position: relative;
+  z-index: 1;
+  color: #0c71c3;
+  padding-top: 100px;
+}
+
+.contact-text h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.contact-shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 0;
+}
+
+footer {
+  background-color: #bdcad9;
+  background-image: linear-gradient(315deg, #bdcad9 0%, #e1dada 74%);
+  height: 50px;
+}
+
+footer p {
+  padding-left: 10px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+footer span {
+  color: #0c71c3;
+}
+
+@media (min-width: 992px) {
+  .hero-img {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/gdanskhd.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .contact-hero {
+    background-image: url(../img/gdansknighthd.jpg);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-text h1 {
+    letter-spacing: 5px;
+    color: #ddd;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 5rem;
+  }
+  .hero-text span {
+    color: #0c71c3;
+  }
+  .hero-text p {
+    color: #ddd;
+    font-size: 1.4rem;
+  }
+  .hero-text .logo {
+    font-size: 3rem;
+    color: #0c71c3;
+  }
+  .nav-logo {
+    font-size: 2rem;
+  }
+  .navbar-brand p {
+    font-size: 1.5rem;
+  }
+  .navbar-nav a {
+    font-size: 1.5rem;
+  }
+  .firm-text {
+    font-size: 1.3rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
