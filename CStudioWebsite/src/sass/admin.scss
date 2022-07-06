@@ -1,0 +1,27 @@
+.menu::after{
+    content: '';
+    width: 0px;
+}
+
+.right-side{
+	background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+
+}
+
+.img{
+    margin: 0;
+}
+
+
+.main-page-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form-check-input{
+        width: 2rem;
+        height: 2rem;
+        margin-right: 2rem;
+    }
+}

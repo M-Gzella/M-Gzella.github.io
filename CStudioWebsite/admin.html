@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta description="" />
+		<title>CiemminskiStudio</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/4f548c60ed.js"
+			crossorigin="anonymous"
+		></script>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+			crossorigin="anonymous"
+		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link rel="stylesheet" href="./dist/css/main.min.css" />
+		<link rel="stylesheet" href="./dist/css/admin.min.css" />
+	</head>
+	<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+
+
+		<div class="zoom-img">
+			<div class="img-box">
+				<button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+				<img src="" alt="">
+			</div>
+			<div class="zoom-shadow"></div>
+		</div>
+
+
+		<div class="container-fluid">
+			<div class="row">
+			<div class="menu col-md-4 col-lg-3 col-xl-2">
+	<div class="logo-box mt-5">
+		<div class="logo"></div>
+	</div>
+
+	<div
+		id="navbar-example"
+		class="menu-items mt-5 text-uppercase d-flex flex-column"
+	>
+		<a href="index.html" class="nav-link"><i class="fa-solid fa-arrow-left"></i> strona główna</a>
+		<a href="admin.html" class="nav-link active">Prześlij zdjęcia</a>
+		<a href="photolist.html" class="nav-link">Lista zdjęć</a>
+	</div>
+
+	<div class="social-box">
+		<div class="social-icons">
+			<a href=""><i class="fa-brands fa-instagram"></i></a>
+			<a href=""><i class="fa-brands fa-facebook"></i></a>
+		</div>
+	</div>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-light">
+	<div class="container">
+		<a class="navbar-brand" href="#"
+			><img src="./dist/img/logo2.png" alt="logo"
+		/></a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarNavAltMarkup"
+			aria-controls="navbarNavAltMarkup"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a href="index.html" class="nav-link"><i class="fa-solid fa-arrow-left"></i> strona główna</a>
+				<a href="admin.html" class="nav-link">Prześlij zdjęcia</a>
+		        <a href="photolist.html" class="nav-link">Lista zdjęć</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+				<div class="right-side col-12 col-md-8 col-lg-9 col-xl-10 p-0">
+                    
+                    <form id="send" class="container send-box">
+                        <div class="label-box">
+                            
+                                <label for="formFileMultiple" class="form-label">Prześlij zdjęcia/wideo <i class="fa-solid fa-photo-film"></i></label>
+                                <input class="form-control" type="file" id="formFileMultiple" multiple>
+                            
+
+                            
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Wybierz kategorię</option>
+                                    <option value="1">Zdjęcia</option>
+                                    <option value="2">Wideo</option>
+                                  </select>
+                            
+
+                                <input class="form-control" type="text" placeholder="Nazwa" aria-label="default input example">
+                             
+
+                            
+                                <label for="exampleFormControlTextarea1" class="form-label">Opis</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                                <input class="form-control" type="number" placeholder="Numer indeksu" aria-label="default input example">
+
+                                <div class="form-check main-page-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                    Wyświetlić na stronie głównej?
+                                    </label>
+                                  </div>
+                                
+                                <div class="send-btn"><button type="button" class="btn btn-outline-dark">Prześlij</button></div>
+                        </div>
+
+                    </form>
+                    
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+
+
+	
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+    ></script>
+	<script src="./dist/js/main.min.js"></script>
+</html>
