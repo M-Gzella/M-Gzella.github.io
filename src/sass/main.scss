@@ -1,0 +1,286 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+p {
+	font-family: 'Montserrat', sans-serif;
+}
+h2 {
+	font-family: 'Great Vibes', cursive;
+}
+
+.drinks_container {
+	.drink {
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.drink_photo {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+		}
+		.drink_description {
+			z-index: 1;
+			padding: 2rem 2rem;
+			color: #fefefe;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 30px;
+			h2 {
+				font-size: 35px;
+			}
+			.flex_description {
+				text-align: center;
+				gap: 30px;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				font-size: 16px;
+				line-height: 25px;
+				ul {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+			.comment {
+				width: 8rem;
+				height: 5rem;
+				background-repeat: no-repeat;
+				align-self: end;
+			}
+		}
+	}
+	.drink_one {
+		.drink_photo {
+			background-image: url(../img/jaggerbomb.jpg);
+			&::before {
+				background: rgb(19, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(19, 0, 0, 0.8),
+					rgba(238, 179, 39, 0.3) 55%,
+					rgba(206, 242, 90, 0.3)
+				);
+			}
+		}
+		.drink_description {
+			.comment {
+				background-image: url('../img/brumir.png');
+			}
+		}
+	}
+	.drink_two {
+		.drink_photo {
+			background-image: url(../img/sex.jpg);
+			&::before {
+				background: rgb(19, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(19, 0, 0, 0.8) 0%,
+					rgba(255, 158, 0, 0.3) 55%,
+					rgba(222, 52, 26, 0.3) 100%
+				);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 8rem;
+				background-image: url('../img/gg.png');
+			}
+		}
+	}
+    .drink_three {
+		.drink_photo {
+			background-image: url(../img/lagoon.jpg);
+			&::before {
+				background: rgb(19,0,0);
+                background: linear-gradient(180deg, rgba(19,0,0,.8) 0%, rgba(10,254,251,.3) 55%, rgba(242,36,36,.3) 100%);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 3rem;
+                width: 12rem;
+				background-image: url('../img/seweryn.png');
+			}
+		}
+	}
+    .drink_four {
+		.drink_photo {
+			background-image: url(../img/paradise.jpeg);
+			&::before {
+				background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(10,179,254,.3) 55%, rgba(242,164,36,.3) 100%);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 4rem;
+                width: 6rem;
+				background-image: url('../img/weronika.png');
+			}
+		}
+	}
+    .drink_five {
+		.drink_photo {
+			background-image: url(../img/sunrise.jpg);
+			&::before {
+				background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(249,255,0,.3) 55%, rgba(217,67,37,.3) 100%);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 5rem;
+                width: 10rem;
+				background-image: url('../img/misia.png');
+			}
+		}
+	}
+    .drink_six {
+		.drink_photo {
+			background-image: url(../img/smerfetka.jpeg);
+			&::before {
+				background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(0,202,255,.3) 55%, rgba(194,37,217,.3) 100%);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 4rem;
+                width: 13rem;
+				background-image: url('../img/arek.png');
+			}
+		}
+	}
+    .drink_seven {
+		.drink_photo {
+			background-image: url(../img/collins.jpg);
+			&::before {
+				background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(224,224,224,.3) 55%, rgba(226,246,18,.3) 100%);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 4rem;
+                width: 7rem;
+				background-image: url('../img/arek2.png');
+			}
+		}
+	}
+    .drink_eight {
+		.drink_photo {
+			background-image: url(../img/mohito.jpg);
+			&::before {
+				background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(99,255,6,.3) 55%, rgba(30,204,41,.3) 100%);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 4rem;
+                width: 11rem;
+				background-image: url('../img/wiki.png');
+			}
+		}
+	}
+    .drink_nine {
+		.drink_photo {
+			background-image: url(../img/apple.jpg);
+			&::before {
+				background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(227,119,37,.3) 55%, rgba(30,204,41,.3) 100%);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 4rem;
+                width: 19rem;
+				background-image: url('../img/arek3.png');
+			}
+		}
+	}
+    .drink_ten {
+		.drink_photo {
+			background-image: url(../img/jager.jpg);
+			&::before {
+				background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(25,139,6,.3) 55%, rgba(173,4,4,.3) 100%);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 4rem;
+                width: 9rem;
+				background-image: url('../img/kuba.png');
+			}
+		}
+	}
+    .drink_eleven {
+		.drink_photo {
+			background-image: url(../img/shoty.jpg);
+			&::before {
+				background: rgb(0,0,0);
+                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+			}
+		}
+		.drink_description {
+            .flex_description{
+                ul li{
+                    text-align: start;
+                    margin-bottom: 1rem;
+                }
+            }
+            .comment_container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                .comment {
+                    height: 10rem;
+                    width: 8rem;
+                    background-size: contain;
+                    border-radius: 50%;
+                    background-image: url('../img/kot2.jpg');
+                }
+                .comment2 {
+                    height: 10rem;
+                    width: 8rem;
+                    background-size: contain;
+                    border-radius: 50%;
+                    background-image: url('../img/kot.jpg');
+                }
+            }
+		}
+	}
+}
