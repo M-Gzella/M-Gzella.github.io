@@ -5,6 +5,13 @@
 	padding: 0;
 	margin: 0;
 }
+
+.turn_off{
+    opacity: 0;
+}
+.turn_on{
+    opacity: 1;
+}
 p {
 	font-family: 'Montserrat', sans-serif;
 }
@@ -71,6 +78,25 @@ h2 {
 					justify-content: center;
 				}
 			}
+            .flex{
+                transition: opacity 1s;
+            }
+            .recipe{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: opacity 1s;
+                text-align: center;
+                margin: 0 2rem;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    list-style: none;
+                    line-height: 25px;
+                }
+            }
 			.comment {
 				width: 8rem;
 				height: 5rem;
@@ -247,6 +273,8 @@ h2 {
 		}
 	}
     .drink_eleven {
+        position: relative;
+        padding-bottom: 2rem;
 		.drink_photo {
 			background-image: url(../img/shoty.jpg);
 			&::before {
@@ -282,5 +310,71 @@ h2 {
                 }
             }
 		}
-	}
+        
+        .disco{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            -webkit-perspective: 500px; 
+            perspective: 500px;
+            background: transparent;
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+            p:last-child{
+                -webkit-transform: rotateX(350deg) rotateY(20deg) rotateZ(-1deg); 
+                transform: rotateX(350deg) rotateY(20deg) rotateZ(-1deg); 
+            }
+            p{
+                color:black;
+                
+                font-family: 'Oswald', sans-serif;
+                font-size:3em;
+                line-height:1;
+                margin:0;
+                padding:0;
+                
+                -webkit-transform: rotateX(25deg) rotateY(20deg) rotateZ(-3deg); 
+                transform: rotateX(25deg) rotateY(20deg) rotateZ(-3deg);  
+                
+                -webkit-animation: anim 3s;
+                -webkit-animation-timing-function: linear;
+                -webkit-animation-iteration-count:infinite;
+                
+                animation: anim 3s;
+                animation-timing-function: linear;
+                animation-iteration-count:infinite;
+              }
+              
+              @-webkit-keyframes anim {
+                  0%{text-shadow:-6px 4px 0px red;}
+                  10% {text-shadow:4px -6px 0px green;}
+                  20% {text-shadow:-9px 4px 0px blue;}
+                  30% {text-shadow:4px -6px 0px yellow;}
+                  40% {text-shadow:-8px 4px 0px orange;}
+                  50% {text-shadow:4px 5px 0px purple;}
+                  60% {text-shadow:-6px 4px 0px brown;}
+                  70% {text-shadow:4px 7px 0px pink;}
+                  80% {text-shadow:-9px -4px 0px lime;}
+                  90% {text-shadow:4px -6px 0px cyan;}
+                  100% {text-shadow:-9px 4px 0px teal;}
+              } 
+              
+              @keyframes anim {
+                  0%{text-shadow:-6px 4px 0px red;}
+                  10% {text-shadow:4px -6px 0px green;}
+                  20% {text-shadow:-9px 4px 0px blue;}
+                  30% {text-shadow:4px -6px 0px yellow;}
+                  40% {text-shadow:-8px 4px 0px orange;}
+                  50% {text-shadow:4px 5px 0px purple;}
+                  60% {text-shadow:-6px 4px 0px brown;}
+                  70% {text-shadow:4px 7px 0px pink;}
+                  80% {text-shadow:-9px -4px 0px lime;}
+                  90% {text-shadow:4px -6px 0px cyan;}
+                  100% {text-shadow:-9px 4px 0px teal;}
+              } 
+
+        }
+          
+    }
 }
