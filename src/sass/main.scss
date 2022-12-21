@@ -14,7 +14,7 @@ body{
 .turn_on{
     opacity: 1;
 }
-p {
+p, li {
 	font-family: 'Montserrat', sans-serif;
 }
 h2 {
@@ -283,6 +283,73 @@ h2 {
 			&::before {
 				background: rgb(0,0,0);
                 background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                animation: 1.5s infinite ease-in-out party;
+                @keyframes party{
+                    0%{
+                        background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    5%{
+                        background: linear-gradient(18deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    10%{
+                        background: linear-gradient(36deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    15%{
+                        background: linear-gradient(54deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    20%{
+                        background: linear-gradient(72deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    25%{
+                        background: linear-gradient(90deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    30%{
+                        background: linear-gradient(108deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    35%{
+                        background: linear-gradient(126deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    40%{
+                        background: linear-gradient(144deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    45%{
+                        background: linear-gradient(162deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    50%{
+                        background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    55%{
+                        background: linear-gradient(198deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    60%{
+                        background: linear-gradient(216deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    65%{
+                        background: linear-gradient(234deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    70%{
+                        background: linear-gradient(252deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    75%{
+                        background: linear-gradient(270deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    80%{
+                        background: linear-gradient(288deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    85%{
+                        background: linear-gradient(306deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    90%{
+                        background: linear-gradient(324deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    95%{
+                        background: linear-gradient(342deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    100%{
+                        background: linear-gradient(360deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
+                    }
+                    
+                }
 			}
 		}
 		.drink_description {
