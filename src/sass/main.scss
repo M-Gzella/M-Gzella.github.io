@@ -5,7 +5,9 @@
 	padding: 0;
 	margin: 0;
 }
-
+body{
+    margin-top: -2rem;
+}
 .turn_off{
     opacity: 0;
 }
@@ -60,6 +62,7 @@ h2 {
 			gap: 30px;
 			h2 {
 				font-size: 35px;
+                text-align: center;
 			}
 			.flex_description {
 				text-align: center;
