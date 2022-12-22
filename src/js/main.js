@@ -43,6 +43,18 @@ const comment_twelve = document.querySelector('.comment_twelve')
 const recipe_eleven = document.querySelector(".recipe_eleven")
 const flex_eleven = document.querySelector(".flex_eleven")
 
+const comment_thirteen = document.querySelector('.comment_thirteen')
+const recipe_thirteen = document.querySelector(".recipe_thirteen")
+const flex_thirteen = document.querySelector(".flex_thirteen")
+
+const comment_fourteen = document.querySelector('.comment_fourteen')
+const recipe_fourteen = document.querySelector(".recipe_fourteen")
+const flex_fourteen = document.querySelector(".flex_fourteen")
+
+const comment_fifteen = document.querySelector('.comment_fifteen')
+const recipe_fifteen = document.querySelector(".recipe_fifteen")
+const flex_fifteen = document.querySelector(".flex_fifteen")
+
 const turn_on = () => {
     recipe_one.classList.toggle('turn_on');
     flex_one.classList.toggle('turn_off')
@@ -97,6 +109,19 @@ const turn_on_eleven = () => {
     recipe_eleven.classList.toggle('turn_on');
     flex_eleven.classList.toggle('turn_off');
 }
+const turn_on_thirteen = () => {
+    recipe_thirteen.classList.toggle('turn_on');
+    flex_thirteen.classList.toggle('turn_off');
+}
+const turn_on_fourteen = () => {
+    recipe_fourteen.classList.toggle('turn_on');
+    flex_fourteen.classList.toggle('turn_off');
+}
+
+const turn_on_fifteen = () => {
+    recipe_fifteen.classList.toggle('turn_on');
+    flex_fifteen.classList.toggle('turn_off');
+}
 
 comment_one.addEventListener('click', turn_on)
 comment_two.addEventListener('click', turn_on_two)
@@ -110,3 +135,6 @@ comment_nine.addEventListener('click', turn_on_nine)
 comment_ten.addEventListener('click', turn_on_ten)
 comment_eleven.addEventListener('click', turn_on_eleven)
 comment_twelve.addEventListener('click', turn_on_eleven)
+comment_thirteen.addEventListener('click', turn_on_thirteen)
+comment_fourteen.addEventListener('click', turn_on_fourteen)
+comment_fifteen.addEventListener('click', turn_on_fifteen)

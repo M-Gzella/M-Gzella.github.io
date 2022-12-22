@@ -5,20 +5,24 @@
 	padding: 0;
 	margin: 0;
 }
-body{
-    margin-top: -2rem;
+body {
+	margin-top: -2rem;
 }
-.turn_off{
-    opacity: 0;
+.turn_off {
+	opacity: 0;
 }
-.turn_on{
-    opacity: 1;
+.turn_on {
+	opacity: 1;
 }
-p, li {
+p,
+li {
 	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
 }
 h2 {
 	font-family: 'Great Vibes', cursive;
+	font-weight: 600;
+	filter: drop-shadow(0px -10px 3px #fefefe);
 }
 
 .drinks_container {
@@ -28,6 +32,16 @@ h2 {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: rgba(0,0,0,.3);
+			z-index: 1;
+		}
 		.drink_photo {
 			position: absolute;
 			top: 0;
@@ -62,7 +76,7 @@ h2 {
 			gap: 30px;
 			h2 {
 				font-size: 35px;
-                text-align: center;
+				text-align: center;
 			}
 			.flex_description {
 				text-align: center;
@@ -81,30 +95,44 @@ h2 {
 					justify-content: center;
 				}
 			}
-            .flex{
-                transition: opacity 1s;
-            }
-            .recipe{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: opacity 1s;
-                text-align: center;
-                margin: 0 2rem;
-                ul{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    list-style: none;
-                    line-height: 25px;
-                }
-            }
+			.flex {
+				transition: opacity 1s;
+			}
+			.recipe {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				transition: opacity 1s;
+				text-align: center;
+				margin: 0 2rem;
+				padding: 1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background-image: url('../img/note2.jpg');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				border-radius: 10px;
+				ul {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					list-style: none;
+					line-height: 25px;
+					color: #444444;
+				}
+				p {
+					color: #444444;
+				}
+			}
 			.comment {
 				width: 8rem;
 				height: 5rem;
 				background-repeat: no-repeat;
 				align-self: end;
+				z-index: 1000;
 			}
 		}
 	}
@@ -147,304 +175,608 @@ h2 {
 			}
 		}
 	}
-    .drink_three {
+	.drink_three {
 		.drink_photo {
 			background-image: url(../img/lagoon.jpg);
 			&::before {
-				background: rgb(19,0,0);
-                background: linear-gradient(180deg, rgba(19,0,0,.8) 0%, rgba(10,254,251,.3) 55%, rgba(242,36,36,.3) 100%);
+				background: rgb(19, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(19, 0, 0, 0.8) 0%,
+					rgba(10, 254, 251, 0.3) 55%,
+					rgba(242, 36, 36, 0.3) 100%
+				);
 			}
 		}
 		.drink_description {
 			.comment {
 				height: 3rem;
-                width: 12rem;
+				width: 12rem;
 				background-image: url('../img/seweryn.png');
 			}
 		}
 	}
-    .drink_four {
+	.drink_four {
 		.drink_photo {
 			background-image: url(../img/paradise.jpeg);
 			&::before {
-				background: rgb(0,0,0);
-                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(10,179,254,.3) 55%, rgba(242,164,36,.3) 100%);
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(10, 179, 254, 0.3) 55%,
+					rgba(242, 164, 36, 0.3) 100%
+				);
 			}
 		}
 		.drink_description {
 			.comment {
 				height: 4rem;
-                width: 6rem;
+				width: 6rem;
 				background-image: url('../img/weronika.png');
 			}
 		}
 	}
-    .drink_five {
+	.drink_five {
 		.drink_photo {
 			background-image: url(../img/sunrise.jpg);
 			&::before {
-				background: rgb(0,0,0);
-                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(249,255,0,.3) 55%, rgba(217,67,37,.3) 100%);
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(249, 255, 0, 0.3) 55%,
+					rgba(217, 67, 37, 0.3) 100%
+				);
 			}
 		}
 		.drink_description {
 			.comment {
 				height: 5rem;
-                width: 10rem;
+				width: 10rem;
 				background-image: url('../img/misia.png');
 			}
 		}
 	}
-    .drink_six {
+	.drink_six {
 		.drink_photo {
 			background-image: url(../img/smerfetka.jpeg);
 			&::before {
-				background: rgb(0,0,0);
-                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(0,202,255,.3) 55%, rgba(194,37,217,.3) 100%);
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(0, 202, 255, 0.3) 55%,
+					rgba(194, 37, 217, 0.3) 100%
+				);
 			}
 		}
 		.drink_description {
 			.comment {
 				height: 4rem;
-                width: 13rem;
+				width: 13rem;
 				background-image: url('../img/arek.png');
 			}
 		}
 	}
-    .drink_seven {
+	.drink_seven {
 		.drink_photo {
 			background-image: url(../img/collins.jpg);
 			&::before {
-				background: rgb(0,0,0);
-                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(224,224,224,.3) 55%, rgba(226,246,18,.3) 100%);
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(224, 224, 224, 0.3) 55%,
+					rgba(226, 246, 18, 0.3) 100%
+				);
 			}
 		}
 		.drink_description {
 			.comment {
 				height: 4rem;
-                width: 7rem;
+				width: 7rem;
 				background-image: url('../img/arek2.png');
 			}
 		}
 	}
-    .drink_eight {
+	.drink_eight {
 		.drink_photo {
 			background-image: url(../img/mohito.jpg);
 			&::before {
-				background: rgb(0,0,0);
-                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(99,255,6,.3) 55%, rgba(30,204,41,.3) 100%);
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(99, 255, 6, 0.3) 55%,
+					rgba(30, 204, 41, 0.3) 100%
+				);
 			}
 		}
 		.drink_description {
 			.comment {
 				height: 4rem;
-                width: 11rem;
+				width: 11rem;
 				background-image: url('../img/wiki.png');
 			}
 		}
 	}
-    .drink_nine {
+	.drink_nine {
 		.drink_photo {
 			background-image: url(../img/apple.jpg);
 			&::before {
-				background: rgb(0,0,0);
-                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(227,119,37,.3) 55%, rgba(30,204,41,.3) 100%);
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(227, 119, 37, 0.3) 55%,
+					rgba(30, 204, 41, 0.3) 100%
+				);
 			}
 		}
 		.drink_description {
 			.comment {
 				height: 4rem;
-                width: 19rem;
+				width: 19rem;
 				background-image: url('../img/arek3.png');
 			}
 		}
 	}
-    .drink_ten {
+	.drink_ten {
 		.drink_photo {
 			background-image: url(../img/jager.jpg);
 			&::before {
-				background: rgb(0,0,0);
-                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(25,139,6,.3) 55%, rgba(173,4,4,.3) 100%);
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(25, 139, 6, 0.3) 55%,
+					rgba(173, 4, 4, 0.3) 100%
+				);
 			}
 		}
 		.drink_description {
 			.comment {
 				height: 4rem;
-                width: 9rem;
+				width: 9rem;
 				background-image: url('../img/kuba.png');
 			}
 		}
 	}
-    .drink_eleven {
-        position: relative;
-        padding-bottom: 2rem;
+	.drink_thirteen {
 		.drink_photo {
-			background-image: url(../img/shoty.jpg);
+			background-image: url(../img/samba.jpg);
 			&::before {
-				background: rgb(0,0,0);
-                background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                animation: 1.5s infinite ease-in-out party;
-                @keyframes party{
-                    0%{
-                        background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    5%{
-                        background: linear-gradient(18deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    10%{
-                        background: linear-gradient(36deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    15%{
-                        background: linear-gradient(54deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    20%{
-                        background: linear-gradient(72deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    25%{
-                        background: linear-gradient(90deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    30%{
-                        background: linear-gradient(108deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    35%{
-                        background: linear-gradient(126deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    40%{
-                        background: linear-gradient(144deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    45%{
-                        background: linear-gradient(162deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    50%{
-                        background: linear-gradient(180deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    55%{
-                        background: linear-gradient(198deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    60%{
-                        background: linear-gradient(216deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    65%{
-                        background: linear-gradient(234deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    70%{
-                        background: linear-gradient(252deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    75%{
-                        background: linear-gradient(270deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    80%{
-                        background: linear-gradient(288deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    85%{
-                        background: linear-gradient(306deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    90%{
-                        background: linear-gradient(324deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    95%{
-                        background: linear-gradient(342deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    100%{
-                        background: linear-gradient(360deg, rgba(0,0,0,.8) 0%, rgba(31,237,55,.3) 25%, rgba(237,246,23,.3) 50%, rgba(221,7,7,.3) 75%, rgba(209,11,165,.3) 100%);
-                    }
-                    
-                }
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(9, 189, 15, 0.3) 25%,
+					rgba(255, 244, 7, 0.3) 100%
+				);
 			}
 		}
 		.drink_description {
-            .flex_description{
-                ul li{
-                    text-align: start;
-                    margin-bottom: 1rem;
-                }
-            }
-            .comment_container{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
-                .comment {
-                    height: 10rem;
-                    width: 8rem;
-                    background-size: contain;
-                    border-radius: 50%;
-                    background-image: url('../img/kot2.jpg');
-                }
-                .comment2 {
-                    height: 10rem;
-                    width: 8rem;
-                    background-size: contain;
-                    border-radius: 50%;
-                    background-image: url('../img/kot.jpg');
-                }
-            }
+			.comment {
+				height: 4rem;
+				width: 5rem;
+				background-size: contain;
+				background-image: url('../img/brazylia.png');
+			}
 		}
-        
-        .disco{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            -webkit-perspective: 500px; 
-            perspective: 500px;
-            background: transparent;
-            width: 100%;
-            position: absolute;
-            bottom: 10px;
-            p:last-child{
-                -webkit-transform: rotateX(350deg) rotateY(20deg) rotateZ(-1deg); 
-                transform: rotateX(350deg) rotateY(20deg) rotateZ(-1deg); 
-            }
-            p{
-                color:black;
-                
-                font-family: 'Oswald', sans-serif;
-                font-size:3em;
-                line-height:1;
-                margin:0;
-                padding:0;
-                
-                -webkit-transform: rotateX(25deg) rotateY(20deg) rotateZ(-3deg); 
-                transform: rotateX(25deg) rotateY(20deg) rotateZ(-3deg);  
-                
-                -webkit-animation: anim 3s;
-                -webkit-animation-timing-function: linear;
-                -webkit-animation-iteration-count:infinite;
-                
-                animation: anim 3s;
-                animation-timing-function: linear;
-                animation-iteration-count:infinite;
-              }
-              
-              @-webkit-keyframes anim {
-                  0%{text-shadow:-6px 4px 0px red;}
-                  10% {text-shadow:4px -6px 0px green;}
-                  20% {text-shadow:-9px 4px 0px blue;}
-                  30% {text-shadow:4px -6px 0px yellow;}
-                  40% {text-shadow:-8px 4px 0px orange;}
-                  50% {text-shadow:4px 5px 0px purple;}
-                  60% {text-shadow:-6px 4px 0px brown;}
-                  70% {text-shadow:4px 7px 0px pink;}
-                  80% {text-shadow:-9px -4px 0px lime;}
-                  90% {text-shadow:4px -6px 0px cyan;}
-                  100% {text-shadow:-9px 4px 0px teal;}
-              } 
-              
-              @keyframes anim {
-                  0%{text-shadow:-6px 4px 0px red;}
-                  10% {text-shadow:4px -6px 0px green;}
-                  20% {text-shadow:-9px 4px 0px blue;}
-                  30% {text-shadow:4px -6px 0px yellow;}
-                  40% {text-shadow:-8px 4px 0px orange;}
-                  50% {text-shadow:4px 5px 0px purple;}
-                  60% {text-shadow:-6px 4px 0px brown;}
-                  70% {text-shadow:4px 7px 0px pink;}
-                  80% {text-shadow:-9px -4px 0px lime;}
-                  90% {text-shadow:4px -6px 0px cyan;}
-                  100% {text-shadow:-9px 4px 0px teal;}
-              } 
+	}
+	.drink_fourteen {
+		.drink_photo {
+			background-image: url(../img/rycerz.jpg);
+			&::before {
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.6) 50%,
+					rgba(255, 244, 7, 0.3) 100%
+				);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 4rem;
+				width: 5rem;
+				background-size: contain;
+				background-image: url('../img/batman.png');
+			}
+		}
+	}
+	.drink_fifteen {
+		.drink_photo {
+			background-image: url(../img/ropucha.jpg);
+			&::before {
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(20, 161, 34, 0.3) 50%,
+					rgba(208, 111, 0, 0.3) 100%
+				);
+			}
+		}
+		.drink_description {
+			.comment {
+				height: 4rem;
+				width: 7rem;
+				background-size: contain;
+				background-image: url('../img/pepe.png');
+			}
+		}
+	}
+	.drink_eleven {
+		position: relative;
+		padding-bottom: 2rem;
+		.drink_photo {
+			background-image: url(../img/shoty.jpg);
+			&::before {
+				background: rgb(0, 0, 0);
+				background: linear-gradient(
+					180deg,
+					rgba(0, 0, 0, 0.8) 0%,
+					rgba(31, 237, 55, 0.3) 25%,
+					rgba(237, 246, 23, 0.3) 50%,
+					rgba(221, 7, 7, 0.3) 75%,
+					rgba(209, 11, 165, 0.3) 100%
+				);
+				animation: 1.5s infinite ease-in-out party;
+				@keyframes party {
+					0% {
+						background: linear-gradient(
+							0deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					5% {
+						background: linear-gradient(
+							18deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					10% {
+						background: linear-gradient(
+							36deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					15% {
+						background: linear-gradient(
+							54deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					20% {
+						background: linear-gradient(
+							72deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					25% {
+						background: linear-gradient(
+							90deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					30% {
+						background: linear-gradient(
+							108deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					35% {
+						background: linear-gradient(
+							126deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					40% {
+						background: linear-gradient(
+							144deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					45% {
+						background: linear-gradient(
+							162deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					50% {
+						background: linear-gradient(
+							180deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					55% {
+						background: linear-gradient(
+							198deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					60% {
+						background: linear-gradient(
+							216deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					65% {
+						background: linear-gradient(
+							234deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					70% {
+						background: linear-gradient(
+							252deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					75% {
+						background: linear-gradient(
+							270deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					80% {
+						background: linear-gradient(
+							288deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					85% {
+						background: linear-gradient(
+							306deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					90% {
+						background: linear-gradient(
+							324deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					95% {
+						background: linear-gradient(
+							342deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+					100% {
+						background: linear-gradient(
+							360deg,
+							rgba(0, 0, 0, 0.8) 0%,
+							rgba(31, 237, 55, 0.3) 25%,
+							rgba(237, 246, 23, 0.3) 50%,
+							rgba(221, 7, 7, 0.3) 75%,
+							rgba(209, 11, 165, 0.3) 100%
+						);
+					}
+				}
+			}
+		}
+		.drink_description {
+			.recipe_eleven {
+				display: flex;
+				flex-direction: column;
+			}
+			.flex_description {
+				ul li {
+					text-align: start;
+					margin-bottom: 1rem;
+				}
+			}
+			.comment_container {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				.comment {
+					height: 10rem;
+					width: 8rem;
+					background-size: contain;
+					border-radius: 50%;
+					background-image: url('../img/kot2.jpg');
+				}
+				.comment2 {
+					height: 10rem;
+					width: 8rem;
+					background-size: contain;
+					border-radius: 50%;
+					background-image: url('../img/kot.jpg');
+				}
+			}
+		}
 
-        }
-          
-    }
+		.disco {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			-webkit-perspective: 500px;
+			perspective: 500px;
+			background: transparent;
+			width: 100%;
+			position: absolute;
+			bottom: 10px;
+			p:last-child {
+				-webkit-transform: rotateX(350deg) rotateY(20deg) rotateZ(-1deg);
+				transform: rotateX(350deg) rotateY(20deg) rotateZ(-1deg);
+			}
+			p {
+				color: black;
+
+				font-family: 'Oswald', sans-serif;
+				font-size: 3em;
+				line-height: 1;
+				margin: 0;
+				padding: 0;
+
+				-webkit-transform: rotateX(25deg) rotateY(20deg) rotateZ(-3deg);
+				transform: rotateX(25deg) rotateY(20deg) rotateZ(-3deg);
+
+				-webkit-animation: anim 3s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+
+				animation: anim 3s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+
+			@-webkit-keyframes anim {
+				0% {
+					text-shadow: -6px 4px 0px red;
+				}
+				10% {
+					text-shadow: 4px -6px 0px green;
+				}
+				20% {
+					text-shadow: -9px 4px 0px blue;
+				}
+				30% {
+					text-shadow: 4px -6px 0px yellow;
+				}
+				40% {
+					text-shadow: -8px 4px 0px orange;
+				}
+				50% {
+					text-shadow: 4px 5px 0px purple;
+				}
+				60% {
+					text-shadow: -6px 4px 0px brown;
+				}
+				70% {
+					text-shadow: 4px 7px 0px pink;
+				}
+				80% {
+					text-shadow: -9px -4px 0px lime;
+				}
+				90% {
+					text-shadow: 4px -6px 0px cyan;
+				}
+				100% {
+					text-shadow: -9px 4px 0px teal;
+				}
+			}
+
+			@keyframes anim {
+				0% {
+					text-shadow: -6px 4px 0px red;
+				}
+				10% {
+					text-shadow: 4px -6px 0px green;
+				}
+				20% {
+					text-shadow: -9px 4px 0px blue;
+				}
+				30% {
+					text-shadow: 4px -6px 0px yellow;
+				}
+				40% {
+					text-shadow: -8px 4px 0px orange;
+				}
+				50% {
+					text-shadow: 4px 5px 0px purple;
+				}
+				60% {
+					text-shadow: -6px 4px 0px brown;
+				}
+				70% {
+					text-shadow: 4px 7px 0px pink;
+				}
+				80% {
+					text-shadow: -9px -4px 0px lime;
+				}
+				90% {
+					text-shadow: 4px -6px 0px cyan;
+				}
+				100% {
+					text-shadow: -9px 4px 0px teal;
+				}
+			}
+		}
+	}
 }
